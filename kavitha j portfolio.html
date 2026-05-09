@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavitha J | Microbiologist & Food Safety Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg2: #f5f7f5;
+    --bg3: #eef1ee;
+    --accent: #2a7d5f;
+    --accent2: #1a5c44;
+    --gold: #b07030;
+    --text: #1a1f1a;
+    --muted: #5a6e5a;
+    --border: rgba(42,125,95,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--accent2);
+    letter-spacing: 0.05em;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  nav a:hover { color: var(--accent2); }
+
+  .nav-badge {
+    background: rgba(42,125,95,0.10);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 40%, rgba(42,125,95,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 20% 70%, rgba(176,112,48,0.05) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(42,125,95,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(42,125,95,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 1.5rem 0 2.5rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #0d0f0e;
+    padding: 0.85rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent2);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--accent);
+    padding: 0.85rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover {
+    background: rgba(42,125,95,0.08);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    margin-top: 4rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    border-left: 1px solid var(--border);
+    padding-left: 1.5rem;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--accent2);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 5rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 3rem;
+    line-height: 1.2;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 0 3rem;
+    max-width: calc(1100px - 6rem);
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .about-text p strong {
+    color: var(--accent2);
+    font-weight: 500;
+  }
+
+  .about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .highlight-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.2rem 1.5rem;
+    transition: border-color 0.3s;
+  }
+
+  .highlight-card:hover { border-color: var(--accent); }
+
+  .highlight-card h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* SKILLS */
+  .skills-outer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 5rem 3rem;
+  }
+
+  .skills-inner { max-width: 1100px; margin: 0 auto; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-block {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skill-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s;
+  }
+
+  .skill-block:hover::before { transform: scaleY(1); }
+  .skill-block:hover { border-color: rgba(232,160,72,0.3); }
+
+  .skill-block h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .skill-block ul { list-style: none; }
+
+  .skill-block li {
+    font-size: 0.84rem;
+    color: var(--muted);
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255,200,100,0.04);
+  }
+
+  .skill-block li:last-child { border-bottom: none; }
+
+  .skill-block li::before {
+    content: '→ ';
+    color: var(--accent);
+    font-size: 0.7rem;
+  }
+
+  /* EXPERIENCE */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.45rem;
+    top: 0.4rem;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--accent);
+  }
+
+  .timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-org {
+    font-size: 0.82rem;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+
+  .timeline-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .timeline-list li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .timeline-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(42,125,95,0.05) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .project-card:hover { border-color: rgba(232,160,72,0.3); transform: translateY(-3px); }
+  .project-card:hover::after { opacity: 1; }
+
+  .project-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+
+  .project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .project-card p {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* CERTS */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .cert-item:hover { border-color: var(--accent); }
+
+  .cert-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(42,125,95,0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+
+  .cert-item h4 {
+    font-size: 0.82rem;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+  }
+
+  .cert-item span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+  }
+
+  /* AWARDS */
+  .awards-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .award-card {
+    flex: 1;
+    min-width: 260px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  .award-card:hover { border-color: var(--gold); }
+
+  .award-medal {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .award-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .award-card p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* CONTACT */
+  .contact-outer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 5rem 3rem;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.88rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+  }
+
+  .contact-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  .contact-link-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(42,125,95,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .contact-right p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem 3rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    animation: fadeUp 0.7s ease forwards;
+    opacity: 0;
+  }
+
+  .hero-tag { animation-delay: 0.1s; }
+  h1 { animation-delay: 0.25s; }
+  .hero-subtitle { animation-delay: 0.4s; }
+  .hero-actions { animation-delay: 0.55s; }
+  .hero-stats { animation-delay: 0.7s; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    nav ul { display: none; }
+    .hero { padding: 5rem 1.5rem 3rem; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-inner { grid-template-columns: 1fr; }
+    .skills-outer { padding: 4rem 1.5rem; }
+    .contact-outer { padding: 4rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">K.J</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Research</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-badge">Open to Work</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Microbiologist & Food Safety Specialist</div>
+    <h1>Hi, I'm<br><em>Kavitha J</em></h1>
+    <p class="hero-subtitle">
+      Bridging laboratory science and food safety compliance — with expertise in HACCP, ISO 22000, FSSAI standards, and diagnostic microbiology.
+    </p>
+    <div class="hero-actions">
+      <a href="mailto:kavithajanarthanan003@gmail.com" class="btn-primary">Get in Touch</a>
+      <a href="#experience" class="btn-outline">View Experience</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Internships</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">7+</span>
+        <span class="stat-label">Certificates</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Publications</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Conference Proceedings</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">// 01 — About Me</div>
+  <h2>Bridging Lab Science with<br><em>Food Safety Compliance</em></h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm an <strong>MSc Applied Microbiology</strong> student passionate about <strong>food safety, research, and probiotic science</strong>. As a microbiologist, my goal is simple — to make sure the food people eat is safe, well-tested, and regulation-compliant.</p>
+      <p>Through academic training and two hands-on internships, I've built practical skills across both diagnostic labs and food safety consultancy. At <strong>Anderson Diagnostics</strong>, I worked on serological assays, while at <strong>SAS MICRO</strong> I carried out FSSAI compliance audits — two very different environments that taught me a lot about how food safety works in the real world.</p>
+      <p>I've presented at <strong>international conferences</strong> and co-authored journal publications, working on innovations like <strong>probiotic functional chocolates</strong> and <strong>smart biodegradable packaging</strong> — science with real-world impact.</p>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <h4>Current Study</h4>
+        <p>MSc Applied Microbiology — D.D.G.D. Vaishnav College (2024–2026)</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Regulatory Expertise</h4>
+        <p>HACCP, ISO 22000:2018, FSSAI compliance, FoSCoS portal, Form A/B documentation</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Lab Techniques</h4>
+        <p>ELISA, Western Blot, PCR, Gram staining, serology, microencapsulation</p>
+      </div>
+      <div class="highlight-card">
+        <h4>Location</h4>
+        <p>No. 4410, 1st Main Road, Mathur, MMDA — Chennai, Tamil Nadu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<div class="skills-outer" id="skills">
+  <div class="skills-inner">
+    <div class="section-label">// 02 — Technical Arsenal</div>
+    <h2>Core <em>Competencies</em></h2>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h3>Serological Assays</h3>
+        <ul>
+          <li>ELISA & HIV Rapid Tests</li>
+          <li>Western Blot</li>
+          <li>HBsAg, HCV, Widal, RPR</li>
+          <li>TORCH Panel, Anti-CCP, ACL</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Microbiology Lab</h3>
+        <ul>
+          <li>Media Preparation & Streaking</li>
+          <li>Gram Staining & Lawning</li>
+          <li>BACT Alert & Vitek</li>
+          <li>Microencapsulation</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Food Safety & QA</h3>
+        <ul>
+          <li>HACCP Internal Auditing</li>
+          <li>ISO 22000:2018 QA/QC</li>
+          <li>FSSAI Licensing & Compliance</li>
+          <li>Root Cause Analysis</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Molecular Biology</h3>
+        <ul>
+          <li>PCR Techniques</li>
+          <li>ELISA & PCR Training</li>
+          <li>Western Blot Training</li>
+          <li>Biochemical Testing</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Clinical Diagnostics</h3>
+        <ul>
+          <li>Blood Grouping & Smear</li>
+          <li>Coagulation Analyzer</li>
+          <li>Tissue & PAP Smear</li>
+          <li>H&E Staining</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Leadership & Team Work</li>
+          <li>Time Management</li>
+          <li>Good Communication</li>
+          <li>Adaptability</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">// 03 — Experience & Education</div>
+  <h2>The <em>Journey</em> So Far</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">19 May 2025 – 12 Jun 2025</div>
+      <div class="timeline-title">Food Safety Intern</div>
+      <div class="timeline-org">SAS MICRO – Food Safety Audits & Consultancy</div>
+      <ul class="timeline-list">
+        <li>Hands-on experience in FSSAI compliance, food safety audits, labelling validation, field inspections and food hygiene training</li>
+        <li>Executed FSSAI licensing processes — navigated FoSCoS portal, selected appropriate categories and completed Form A/B documentation</li>
+        <li>Developed and reviewed product specification sheets covering physical/chemical properties, microbial limits, shelf life, and packaging aligned with FSSAI and ISO 22000</li>
+        <li>Conducted audits, assessed hygiene practices, reviewed documentation and identified non-compliance</li>
+        <li>Root cause analysis of foodborne outbreaks, risk tracking, and recommending preventive strategies</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">06 Jun 2024 – 07 Jul 2024</div>
+      <div class="timeline-title">Laboratory Intern</div>
+      <div class="timeline-org">Anderson Diagnostics & Labs</div>
+      <ul class="timeline-list">
+        <li>Experience in laboratory techniques and diagnostic procedures across multiple departments</li>
+        <li>Sample collection, media preparation, streaking; operated BACT Alert and Vitek diagnostic machines</li>
+        <li>Performed serological assays: HIV, HBsAg, HCV, Widal, RPR, ELISA, Western Blot, TORCH, Anti-CCP, ACL</li>
+        <li>Blood grouping, peripheral blood smear, centrifuge, automated coagulation analyzer, QBC analyzer</li>
+        <li>Tissue sample processing, PAP smear preparation, and H&E staining</li>
+      </ul>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024 – 2026</div>
+      <div class="timeline-title">MSc Applied Microbiology</div>
+      <div class="timeline-org">D.D.G.D. Vaishnav College — CGPA 7.91</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2021 – 2024</div>
+      <div class="timeline-title">BSc Microbiology</div>
+      <div class="timeline-org">Valliammal College for Women — 82.2%</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS / RESEARCH -->
+<section id="projects">
+  <div class="section-label">// 04 — Research & Publications</div>
+  <h2>Functional Foods &<br><em>Scientific Contributions</em></h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-tag">MSc Project — 2024–2026</div>
+      <h3>Microencapsulated Probiotic Chocolate Bar with Omega-3 Enrichment</h3>
+      <p>Formulated a probiotic chocolate using microencapsulation to improve probiotic survival. Integrated Chlorella sp. as a natural omega-3 source (EPA/DHA), and buckwheat flour as a prebiotic. Evaluated microbial quality and functional food potential.</p>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Conference Proceeding — ICAB-MISF 2025</div>
+      <h3>Functional Probiotic Chocolate Enriched with Arthrobacter globiformis & Flaxseed Powder</h3>
+      <p>Presented at International Conference on Advances in Biotechnology (ICAB-MISF 2025). Explored the synergistic role of novel probiotic strains combined with functional flaxseed components.</p>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Conference Proceeding — ICAB-MISF 2025</div>
+      <h3>Synbiotic Chocolate Bar using Chlorella vulgaris, Lactobacillus spp. & Buckwheat Flour</h3>
+      <p>Presented at ICAB-MISF 2025. Developed a novel synbiotic formulation combining prebiotic and probiotic components for enhanced gut health and nutritional value.</p>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Publication — Journal of Xi'an Shiyou University</div>
+      <h3>pH-Responsive Biodegradable Smart Packaging Incorporating Anthocyanins</h3>
+      <p>Published in Journal of Xi'an Shiyou University (ISSN: 1673-064X). Explored smart packaging fabrication using natural pigments for freshness indication in food products.</p>
+    </div>
+    <div class="project-card">
+      <div class="project-tag">Publication — IJDDT</div>
+      <h3>Herbal-Infused Polysaccharide Coatings for Post-Harvest Shelf Life Enhancement</h3>
+      <p>Investigated the efficacy of herbal extracts incorporated into polysaccharide coatings for extending the post-harvest shelf life of fruits and vegetables. Published in IJDDT.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certs">
+  <div class="section-label">// 05 — Certifications</div>
+  <h2>Credentials &<br><em>Training</em></h2>
+  <div class="certs-grid">
+    <div class="cert-item">
+      <div class="cert-icon">🏅</div>
+      <div>
+        <h4>ISO 22000:2018 QA/QC Professional</h4>
+        <span>Dec 2025</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">🔬</div>
+      <div>
+        <h4>QC Analysis of ASU & Herbal Drugs</h4>
+        <span>Sanjeev Biomedical Research Centre — Dec 2025</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">✅</div>
+      <div>
+        <h4>HACCP – Internal Auditor</h4>
+        <span>Dec 2024</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">🧫</div>
+      <div>
+        <h4>Food & Industrial Microbiology</h4>
+        <span>Aug–Sep 2024</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">🧬</div>
+      <div>
+        <h4>ELISA & PCR Training</h4>
+        <span>Hands-on Laboratory Training</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">🧪</div>
+      <div>
+        <h4>Western Blot Training</h4>
+        <span>Hands-on Laboratory Training</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">💻</div>
+      <div>
+        <h4>Naan Mudhalvan – Microsoft Excel</h4>
+        <span>Government Skill Development Program</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <div class="cert-icon">🩺</div>
+      <div>
+        <h4>Basics of Medical Coding</h4>
+        <span>Feb–Jun 2024</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="section-label">// 06 — Awards & Leadership</div>
+  <h2>Recognition &<br><em>Achievements</em></h2>
+  <div class="awards-row">
+    <div class="award-card">
+      <span class="award-medal">🥈</span>
+      <h3>2nd Prize — Technosaviour 2025</h3>
+      <p>Problem Solving Competition at D.D.G.D. Vaishnav College. Demonstrated analytical thinking and innovative approach to complex challenges.</p>
+    </div>
+    <div class="award-card">
+      <span class="award-medal">🥉</span>
+      <h3>3rd Prize — Conserve to Preserve</h3>
+      <p>National Energy Conservation Day awareness video competition. Produced and presented a creative reel advocating for sustainable energy practices.</p>
+    </div>
+    <div class="award-card">
+      <span class="award-medal">🎓</span>
+      <h3>Student Coordinator</h3>
+      <p>D.D.G.D. Vaishnav College — Organized the lecture "Redefining Limits: Journey Beyond Boundaries." Coordinated with the Department of Microbiology for successful execution.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-outer" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-label">// 07 — Contact</div>
+      <h2>Let's Build<br><em>Something Together</em></h2>
+      <p>Currently seeking entry-level, internship, or research roles in food safety, quality assurance, or diagnostic microbiology. Open to opportunities in Chennai and beyond.</p>
+      <div class="contact-links">
+        <a href="mailto:kavithajanarthanan003@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          kavithajanarthanan003@gmail.com
+        </a>
+        <a href="tel:6380704976" class="contact-link">
+          <div class="contact-link-icon">📞</div>
+          +91 6380704976
+        </a>
+        <a href="https://linkedin.com/in/kavitha-j-09310b286" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          linkedin.com/in/kavitha-j-09310b286
+        </a>
+      </div>
+    </div>
+    <div class="contact-right">
+      <p style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--text); margin-bottom: 1rem;">
+        "Precision in the lab.<br>Integrity in compliance.<br><em>Passion for safety.</em>"
+      </p>
+      <p>Whether it's a quality assurance role, food safety audit position, or a research collaboration — I'm eager to contribute, learn, and grow.</p>
+      <a href="mailto:kavithajanarthanan003@gmail.com" class="btn-primary" style="margin-top: 1rem; display: inline-block;">Send a Message</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2026 Kavitha J — Microbiologist & Food Safety Specialist · Chennai, Tamil Nadu
+</footer>
+
+</body>
+</html>
